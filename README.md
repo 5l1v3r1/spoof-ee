@@ -44,19 +44,19 @@ spoof-mac.py list --wifi
 You can use the hardware port name, such as:
 
 ```bash
-spoof-mac.py randomize wi-fi
+spoofee.py randomize wi-fi
 ```
 
 or the device name, such as:
 
 ```bash
-spoof-mac.py randomize en0
+spoofee.py randomize en0
 ```
 
 #### Set device MAC address to something specific *(requires root)*
 
 ```bash
-spoof-mac.py set 00:00:00:00:00:00 en0
+spoofee.py set 00:00:00:00:00:00 en0
 ```
 
 #### Reset device to its original MAC address *(requires root)*
@@ -66,7 +66,7 @@ available), you can try setting the MAC address of a device back
 to its burned-in address using `reset`:
 
 ```bash
-spoof-mac.py reset wi-fi
+spoofee.py reset wi-fi
 ```
 
 (older versions of OS X may call it "airport" instead of "wi-fi")
