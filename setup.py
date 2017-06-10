@@ -22,7 +22,7 @@ if __name__ == '__main__':
         description=__doc__,
         long_description=__doc__,
         author='r0otz-ee',
-        author_email='illu5iv3@yahoo.com',
+        author_email='',
         url='',
         packages=find_packages(),
         include_package_data=True,
