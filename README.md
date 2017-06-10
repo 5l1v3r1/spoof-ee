@@ -1,42 +1,23 @@
-# SpoofMAC - Spoof your MAC address
+# Spoofee - Spoof your MAC address
 
-### *NOTE: Consider using [spoof](https://github.com/feross/spoof), a node.js port of this package.*
+ a node.js port of this package.*
 
 ### For OS X, Windows, and Linux (most flavors)
 
-I made this because changing your MAC address in Mac OS X is harder than it
-should be. The biggest annoyance is that the Wi-Fi card (Airport) needs to be
-*manually* disassociated from any connected networks in order for the change
-to be applied correctly. Doing this manually every time is tedious and lame.
-
-Instead of doing that, just run this Python script and change your MAC address
+ Python script and change your MAC address
 in one command. *Now for Windows and Linux, too!*
 
 ## Installation
 
-You can install from [PyPI](https://pypi.python.org/pypi/SpoofMAC/) using `pip` or `easy_install`:
 
-```
-pip install SpoofMAC
-easy_install SpoofMAC
-```
 
-or clone/download the repository and install with `setup.py`. Ex:
-
-```
-git clone git://github.com/feross/SpoofMAC.git
-cd SpoofMAC
-python setup.py install
-```
 
 If you're not using the system Python (because you use Homebrew, for example), make sure you add '/usr/local/share/python/' (or equivalent) to your path.
 
-Or, consider using **[spoof](https://github.com/feross/spoof)**, a node.js port of this package.
 
-## Usage
 
-SpoofMAC installs a command-line script called `spoof-mac.py`. You can always
-see up-to-date usage instructions by typing `spoof-mac.py --help`.
+SpoofMAC installs a command-line script called `spoofee.py`. You can always
+see up-to-date usage instructions by typing `spoofee.py --help`.
 
 ### Examples
 
@@ -102,14 +83,11 @@ OS X doesn't let you permanently change your MAC address. Every time you restart
 
 ### Startup Installation Instructions
 
-First, make sure SpoofMAC is [installed](#installation). Then, run the following commands in Terminal:
+ run the following commands in Terminal:
 
-```bash
-# Download the startup file for launchd
-curl https://raw.githubusercontent.com/feross/SpoofMAC/master/misc/local.macspoof.plist > local.macspoof.plist
 
-# Customize location of `spoof-mac.py` to match your system
-cat local.macspoof.plist | sed "s|/usr/local/bin/spoof-mac.py|`which spoof-mac.py`|" | tee local.macspoof.plist
+# Customize location of `spoofee.py` to match your system
+cat local.macspoof.plist | sed "s|/usr/local/bin/spoofee.py|`which spoofee.py`|" | tee local.macspoof.plist
 
 # Copy file to the OS X launchd folder
 sudo cp local.macspoof.plist /Library/LaunchDaemons
@@ -141,27 +119,9 @@ sudo vim /Library/LaunchDaemons/local.macspoof.plist
 - **1.2.0 - Add Windows and Linux support (thanks CJ!)**
 - 1.1.1 - Fix "ValueError: too many values to unpack" error
 - 1.1.0 - Fix regression: List command now shows current MAC address
-- **1.0.0 - Complete rewrite to conform to PEP8 (thanks Tyler!)**
-- **0.0.0 - Original version (by Feross)**
+- **0.0.0 - Original version (r0otz-ee)**
 
-## Contributors
 
-- Feross Aboukhadijeh [http://feross.org]
-- Tyler Kennedy [http://www.tkte.ch]
-- CJ Barker [cjbarker@gmail.com]
 
 *Improvements welcome! (please add yourself to the list)*
 
-## Ports
-
-- [spoof](https://github.com/feross/spoof) - node.js
-
-## MIT License
-
-Copyright (c) 2011-2016
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
